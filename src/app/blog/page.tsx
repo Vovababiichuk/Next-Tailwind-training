@@ -3,7 +3,7 @@ import Link from "next/link";
 import { MdLocalPostOffice } from "react-icons/md";
 
 async function getData() {
-	const res = await fetch("https://jsonplaceholder.typicode.com/postsvjvkbk", {
+	const res = await fetch("https://jsonplaceholder.typicode.com/posts", {
 		// revalidate - це час промежуток запросів на сервер (60 - раз в минуту). Буде закешовано на той час який ми тут вкажемо.
 		next: { revalidate: 60 },
 	});
