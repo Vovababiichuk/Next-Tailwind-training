@@ -1,4 +1,5 @@
 import { Metadata } from "next"
+import { Fragment } from "react";
 
 async function getData(id: string) {
 	const res = await fetch(`https://jsonplaceholder.typicode.com/posts/${id}`)
