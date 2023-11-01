@@ -1,14 +1,18 @@
-import Link from 'next/link'
-import styles from './Header.module.css'
+import Link from "next/link";
+import styles from "./Header.module.css";
 
 const Header = () => {
-	return (
-		<header className='flex items-center gap-4 text-base bg-green-600 text-white p-7'>
-			<Link href='/'>Home</Link>
-			<Link href='/blog'>Blog</Link>
-			<Link href='/about'>About</Link>
-		</header>
-	)
-}
+  return (
+    <header className="bg-green-600 p-6">
+      <div className={styles.container}>
+        <div className="flex items-center gap-4 bg-green-600 text-white">
+					<Link href="/">Home</Link>
+					<Link href="/blog">Blog</Link>
+					<Link href="/about">About</Link>
+				</div>
+      </div>
+    </header>
+  );
+};
 
-export { Header }
+export { Header };
