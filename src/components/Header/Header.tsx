@@ -1,15 +1,43 @@
+"use client";
+
 import Link from "next/link";
-import styles from "./Header.module.css";
+import styles from "./Header.module.scss";
+import { usePathname } from "next/navigation";
+import { Dropdown } from "../DropDown/DropDown";
 
 const Header = () => {
+  const pathname = usePathname();
+
   return (
-    <header className="bg-green-600 p-6">
+    <header className={styles.header}>
       <div className={styles.container}>
-        <div className="flex items-center gap-4 bg-green-600 text-white">
-					<Link href="/">Home</Link>
-					<Link href="/blog">Blog</Link>
-					<Link href="/about">About</Link>
-				</div>
+        <div className={styles.links}>
+          <Link
+            className={`${styles.link} ${
+              pathname === "/" ? styles.active : ""
+            }`}
+            href="/"
+          >
+            Home
+          </Link>
+          <Link
+            className={`${styles.link} ${
+              pathname === "/blog" ? styles.active : ""
+            }`}
+            href="/blog"
+          >
+            Blog
+          </Link>
+          <Link
+            className={`${styles.link} ${
+              pathname === "/about" ? styles.active : ""
+            }`}
+            href="/about"
+          >
+            About
+          </Link>
+          <Dropdown />
+        </div>
       </div>
     </header>
   );

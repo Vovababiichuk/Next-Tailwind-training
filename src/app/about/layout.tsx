@@ -6,12 +6,12 @@ export default function AboutLayout({
 	children: React.ReactNode;
 }) {
 	return <div>
-		<h1>About us</h1>
+		<h1 className='text-2xl text-center'>About us</h1>
 		<ul>
-			<li>
+			<li className='my-2 text-orange-500 transition-opacity hover:opacity-60'>
 				<Link href='/about/contacts'>Contacts</Link>
 			</li>
-			<li>
+			<li className='text-orange-500 transition-opacity hover:opacity-70'>
 				<Link href='/about/team'>Team</Link>
 			</li>
 		</ul>

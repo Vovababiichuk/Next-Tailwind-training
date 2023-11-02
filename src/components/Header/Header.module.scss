@@ -1,0 +1,94 @@
+.container {
+  max-width: 1230px;
+  width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.header {
+  @apply bg-green-600;
+
+  font-size: 16px;
+  /* height: 84px; */
+}
+
+.links {
+  @apply flex items-center text-white;
+ 
+  /* padding: 30px 15px; */
+  
+  
+  display: flex;
+  flex-direction: row;
+  
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+}
+
+.link {
+  /* background-color: red;
+  padding: 24px 10px;
+  transition: background-color 0.3s; */
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 18px 15px;
+  transition: background-color 0.2s ease-in-out;
+
+  &:hover {
+    background-color: orange;
+  }
+
+  &.active {
+    background-color: orange;
+  }
+}
+
+.active {
+  background-color: orange;
+}
+
+
+
+/* Style the dropdown container */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Style the dropdown button */
+.dropbtn {
+  background-color: #3498db;
+  color: white;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Style the dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+/* Style the dropdown links */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color on hover */
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+/* Show the dropdown content when the button is clicked */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
