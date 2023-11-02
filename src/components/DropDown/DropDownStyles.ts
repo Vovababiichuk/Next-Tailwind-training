@@ -1,5 +1,8 @@
 import styled from "styled-components";
 
+interface DropdownMenuProps {
+  isOpen: boolean;
+}
 
 export const DropdownContainer = styled.div`
   position: relative;
@@ -18,7 +21,7 @@ export const DropdownButton = styled.button`
   align-items: center;
 `;
 
-export const DropdownMenu = styled.ul`
+export const DropdownMenu = styled.ul<DropdownMenuProps>`
   position: absolute;
   top: 100%;
   left: 0;

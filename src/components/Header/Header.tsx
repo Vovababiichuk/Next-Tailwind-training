@@ -36,7 +36,7 @@ const Header = () => {
           >
             About
           </Link>
-          <Dropdown />
+          <Dropdown isOpen={false} />
         </div>
       </div>
     </header>

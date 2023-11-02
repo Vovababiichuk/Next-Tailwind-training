@@ -8,11 +8,14 @@ import {
   DropdownMenu,
   DropdownMenuItem,
 } from "./DropDownStyles";
-
 import Link from "next/link";
 
-const Dropdown = () => {
-	
+interface DropdownMenuProps {
+  isOpen: boolean;
+}
+
+const Dropdown: React.FC<DropdownMenuProps> = () => {
+
 	const [isOpen, setIsOpen] = useState(false);
 
   const toggleDropdown = () => {
